@@ -1,12 +1,12 @@
-# [NTIRE 2025 Challenge on Real-World Face Restoration](https://cvlai.net/ntire/2025/) @ [CVPR 2025](https://cvpr.thecvf.com/)
+# [NTIRE 2026 Challenge on Real-World Face Restoration, 🚧 under construction](https://cvlai.net/ntire/2026/) @ [CVPR 2026](https://cvpr.thecvf.com/)
 
-[![ntire](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fraw.githubusercontent.com%2Fzhengchen1999%2FNTIRE2025_RealWorld_Face_Restoration%2Fmain%2Ffigs%2Fdiamond_badge.json)](https://www.cvlai.net/ntire/2025/)
+[![ntire](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjkwang28%2FNTIRE2026_RealWorld_Face_Restoration%2Fmain%2Ffigs%2Fdiamond_badge.json)](https://www.cvlai.net/ntire/2026/)
 [![page](https://img.shields.io/badge/Project-Page-blue?logo=github&logoSvg)](https://ntire-face.github.io/)
-[![CVPRW](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fraw.githubusercontent.com%2Fzhengchen1999%2FNTIRE2025_RealWorld_Face_Restoration%2Fmain%2Ffigs%2Fcvf_badge.json)](https://openaccess.thecvf.com/content/CVPR2025W/NTIRE/html/Chen_NTIRE_2025_Challenge_on_Real-World_Face_Restoration_Methods_and_Results_CVPRW_2025_paper.html)
-[![arXiv](https://img.shields.io/badge/Report-arXiv-red?logo=arxiv&logoSvg)](https://arxiv.org/pdf/2504.14600)
-[![supp](https://img.shields.io/badge/Supplementary-Paper-orange.svg)](https://github.com/zhengchen1999/NTIRE2025_RealWorld_Face_Restoration/releases/download/supp/NTIRE.2025.Real-World.Face.Restoration.Supplementary.pdf)
-[![visitors](https://visitor-badge.laobi.icu/badge?page_id=zhengchen1999.NTIRE2025_RealWorld_Face_Restoration&right_color=violet)](https://github.com/zhengchen1999/NTIRE2025_RealWorld_Face_Restoration)
-[![GitHub Stars](https://img.shields.io/github/stars/zhengchen1999/NTIRE2025_RealWorld_Face_Restoration?style=social)](https://github.com/zhengchen1999/NTIRE2025_RealWorld_Face_Restoration)
+[![CVPRW](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjkwang28%2FNTIRE2026_RealWorld_Face_Restoration%2Fmain%2Ffigs%2Fcvf_badge.json)]()
+[![arXiv](https://img.shields.io/badge/Report-arXiv-red?logo=arxiv&logoSvg)]()
+[![supp](https://img.shields.io/badge/Supplementary-Paper-orange.svg)](https://github.com/jkwang28/NTIRE2026_RealWorld_Face_Restoration/releases/download/supp/NTIRE.2026.Real-World.Face.Restoration.Supplementary.pdf)
+[![visitors](https://visitor-badge.laobi.icu/badge?page_id=jkwang28.NTIRE2026_RealWorld_Face_Restoration&right_color=violet)](https://github.com/jkwang28/NTIRE2026_RealWorld_Face_Restoration)
+[![GitHub Stars](https://img.shields.io/github/stars/jkwang28/NTIRE2026_RealWorld_Face_Restoration?style=social)](https://github.com/jkwang28/NTIRE2026_RealWorld_Face_Restoration)
 
 ## About the Challenge
 
@@ -30,16 +30,16 @@ $$
 
 **Resources** – Official evaluation scripts, pretrained models, and baseline code are available in this public repository.  
 
-<p align="center">
+<!-- <p align="center">
 <img src="figs/results.png" width="1000px"/>
-</p>
+</p> -->
 
 ## Certificates
-The top three teams in this competition have been awarded **NTIRE 2025 award certificates**. The certificates can be downloaded from [Google Drive](https://drive.google.com/file/d/14iuA_IQzq-BCwHmp3nG6BcLfbBbeFO01/view?usp=sharing).
+The top three teams in this competition have been awarded **NTIRE 2026 award certificates**. The certificates can be downloaded from [Google Drive](https://drive.google.com/file/d/14iuA_IQzq-BCwHmp3nG6BcLfbBbeFO01/view?usp=sharing).
 
 ## Conclusion
 
-The NTIRE 2025 Real‑World Face Restoration Challenge accelerated progress in blind face‑restoration and clarified which strategies work best in practice. Key insights are:
+The NTIRE 2026 Real‑World Face Restoration Challenge accelerated progress in blind face‑restoration and clarified which strategies work best in practice. Key insights are:
 
 1. **Competition‑driven progress**
    The track drew **141 registered teams and 10 valid finalists**, using an AdaFace identity filter (cosine ≥ 0.30–0.60 depending on dataset) before scoring. This ensured models work on real images—avoiding overfitting to synthetic data.
@@ -57,7 +57,7 @@ This repository summarizes the solutions submitted by the participants during th
 
 ## How to test the model?
 
-1. `git clone https://github.com/zhengchen1999/NTIRE2025_RealWorld_Face_Restoration.git`
+1. `git clone https://github.com/jkwang28/NTIRE2026_RealWorld_Face_Restoration.git`
 2. Download the model weights from:
 
     - [model zoo folder: Google Drive](https://drive.google.com/drive/folders/19_xeQjOWCF7BZz7eCRUu1jX8F9VC4IeT?usp=drive_link)
@@ -178,10 +178,10 @@ If you find the code helpful in your research or work, please cite the following
 
 ```
 @inproceedings{ntiface25face,
-  title={NTIRE 2025 challenge on real-world face restoration: Methods and results},
+  title={NTIRE 2026 challenge on real-world face restoration: Methods and results},
   author={Chen, Zheng and Wang, Jingkai and Liu, Kai and Gong, Jue and Sun, Lei and Wu, Zongwei and Timofte, Radu and Zhang, Yulun and others},
   booktitle={CVPRW},
-  year={2025}
+  year={2026}
 }
 ```
 
