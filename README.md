@@ -33,6 +33,8 @@ This repository summarizes the solutions submitted by the participants during th
 
 ## How to test the baseline model?
 
+The val data and test data could be downloaded at [Google Drive](https://drive.google.com/drive/folders/1ruyMYFuZNAQb9ntN77KhV86os1icZpU5?usp=sharing). 
+
 1. `git clone https://github.com/jkwang28/NTIRE2026_RealWorld_Face_Restoration.git`
 2. Download the sample model (CodeFormer, Team00) weights from [Google Drive](https://drive.google.com/drive/folders/1dg-R6JiNGM9jXyrf8ndd2kpHOPUvRjgb) and put the downloaded weights into `./model_zoo/team00_CodeFormer` folder.
 3. Select the model you would like to test:
@@ -55,14 +57,14 @@ This repository summarizes the solutions submitted by the participants during th
 3. Put the pretrained model in folder: `./model_zoo/[Your_Team_ID]_[Your_Model_Name]`
 
    - Please zero pad [Your_Team_ID] into two digits: e.g. 00, 01, 02
-   - Note: Please provide a download link for the pretrained model, if the file size exceeds **100 MB**. Put the link in `./model_zoo/[Your_Team_ID]_[Your_Model_Name]/[Your_Team_ID]_[Your_Model_Name].txt`: e.g. [team00_dat.txt](./model_zoo/team00_dat/team00_dat.txt)
+   - Note: Please provide a download link for the pretrained model, if the file size exceeds **100 MB**. Put the link in `./model_zoo/[Your_Team_ID]_[Your_Model_Name]/[Your_Team_ID]_[Your_Model_Name].txt`: e.g. [team00_CodeFormer.txt](./model_zoo/team00_CodeFormer/team00_CodeFormer.txt)
 4. Add your model to the model loader `test.py` as follows:
 
    - Edit the `else` to `elif` in [test.py](./test.py#L24), and then you can add your own model with model id.
 
    - `model_func` **must** be a function, which accept **4 params**. 
 
-     - `model_dir`: the pretrained model. Participants are expected to save their pretrained model in `./model_zoo/` with in a folder named `[Your_Team_ID]_[Your_Model_Name]` (e.g., team00_dat). 
+     - `model_dir`: the pretrained model. Participants are expected to save their pretrained model in `./model_zoo/` with in a folder named `[Your_Team_ID]_[Your_Model_Name]` (e.g., team00_CodeFormer). 
 
      - `input_path`: a folder contains several images in PNG format. 
 
@@ -164,7 +166,7 @@ The score is calculated on the averaged IQA scores on all the val/test datasets.
 
 Code repositories and accompanying technical report PDFs for each edition:  
 
-- **NTIRE 2025**: [CODE](https://github.com/zhengchen1999/NTIRE2025_RealWorld_Face_Restoration) | [PDF](https://openaccess.thecvf.com/content/CVPR2025W/NTIRE/papers/Chen_NTIRE_2025_Challenge_on_Real-World_Face_Restoration_Methods_and_Results_CVPRW_2025_paper.pdf) | [arXiv](https://arxiv.org/abs/2504.14600)
+- **NTIRE 2025**: [Github Repo](https://github.com/zhengchen1999/NTIRE2025_RealWorld_Face_Restoration) | [Report](https://openaccess.thecvf.com/content/CVPR2025W/NTIRE/papers/Chen_NTIRE_2025_Challenge_on_Real-World_Face_Restoration_Methods_and_Results_CVPRW_2025_paper.pdf) | [arXiv](https://arxiv.org/abs/2504.14600)
 
 ## Citation
 
