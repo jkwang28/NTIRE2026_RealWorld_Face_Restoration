@@ -31,22 +31,56 @@ $$
 
 This repository summarizes the solutions submitted by the participants during the challenge. The model script and the pre-trained weight parameters are provided in the [models](./models) and [model_zoo](./model_zoo) folders. Each team is assigned a number according to the submission time of the solution. You can find the correspondence between the number and team in [test.select_model](./test.py). Some participants would like to keep their models confidential. Thus, those models are not included in this repository.
 
-## How to test the model?
+## How to test the baseline model?
 
 1. `git clone https://github.com/jkwang28/NTIRE2026_RealWorld_Face_Restoration.git`
-2. Download the sample model (CodeFormer, Team00) weights from:
-
-    - [model zoo folder: Google Drive](https://drive.google.com/drive/folders/1dg-R6JiNGM9jXyrf8ndd2kpHOPUvRjgb)
-    - [pretrained folder: Google Drive](https://drive.google.com/drive/folders/1PFnR9d5_yQOehUxGhi1S0OfBz_W3QI2T?usp=sharing)
-   
-    Put the downloaded weights in the `./model_zoo` and `./pretrained` folders.
-
+2. Download the sample model (CodeFormer, Team00) weights from [Google Drive](https://drive.google.com/drive/folders/1dg-R6JiNGM9jXyrf8ndd2kpHOPUvRjgb) and put the downloaded weights into `./model_zoo/team00_CodeFormer` folder.
 3. Select the model you would like to test:
     ```bash
     CUDA_VISIBLE_DEVICES=0 python test.py --valid_dir [path to val data dir] --test_dir [path to test data dir] --save_dir [path to your save dir] --model_id 0
     ```
     - You can use either `--valid_dir`, or `--test_dir`, or both of them. Be sure the change the directories `--valid_dir`/`--test_dir` and `--save_dir`.
     - Switch models (default is CodeFormer) through commenting the code in [test.py](./test.py#L19).
+
+## How to add your model?
+
+> [!IMPORTANT]
+>
+> **🚨 Submissions that do not follow the official format will be rejected.**
+
+1. Register your team in the [Google Spreadsheet](https://docs.google.com/spreadsheets/d/168HxDVVHaMp5d5F-WCkVKNavDAmGKLmA1mJlB5thAOY/edit?usp=drive_link) and get your team ID.
+2. Put your the code of your model in folder:  `./models/[Your_Team_ID]_[Your_Model_Name]`
+
+   - Please zero pad [Your_Team_ID] into two digits: e.g. 00, 01, 02
+3. Put the pretrained model in folder: `./model_zoo/[Your_Team_ID]_[Your_Model_Name]`
+
+   - Please zero pad [Your_Team_ID] into two digits: e.g. 00, 01, 02
+   - Note: Please provide a download link for the pretrained model, if the file size exceeds **100 MB**. Put the link in `./model_zoo/[Your_Team_ID]_[Your_Model_Name]/[Your_Team_ID]_[Your_Model_Name].txt`: e.g. [team00_dat.txt](./model_zoo/team00_dat/team00_dat.txt)
+4. Add your model to the model loader `test.py` as follows:
+
+   - Edit the `else` to `elif` in [test.py](./test.py#L24), and then you can add your own model with model id.
+
+   - `model_func` **must** be a function, which accept **4 params**. 
+
+     - `model_dir`: the pretrained model. Participants are expected to save their pretrained model in `./model_zoo/` with in a folder named `[Your_Team_ID]_[Your_Model_Name]` (e.g., team00_dat). 
+
+     - `input_path`: a folder contains several images in PNG format. 
+
+     - `output_path`: a folder contains restored images in PNG format. Please follow the section Folder Structure. 
+
+     - `device`: computation device.
+5. Send us the command to download your code, e.g,
+
+   - `git clone [Your repository link]`
+   - We will add your code and model checkpoint to the repository after the challenge.
+
+> [!TIP]
+>
+> Your model code does not need to be fully refactored to fit this repository. 
+> Instead, you may add a lightweight external interface (e.g., `models.team00_CodeFormer.inference_codeformer.main`) that wraps your existing code, while keeping the original implementation unchanged.
+>
+> Refer to previous NTIRE challenge implementations for examples: 
+> https://github.com/zhengchen1999/NTIRE2025_RealWorld_Face_Restoration/tree/main/models
 
 ## How to eval images using NR-IQA metrics and facial ID?
 
@@ -125,6 +159,12 @@ $$
 $$
 
 The score is calculated on the averaged IQA scores on all the val/test datasets. 
+
+## NTIRE Real-world Face Restoration Challenge Series
+
+Code repositories and accompanying technical report PDFs for each edition:  
+
+- **NTIRE 2025**: [CODE](https://github.com/zhengchen1999/NTIRE2025_RealWorld_Face_Restoration) | [PDF](https://openaccess.thecvf.com/content/CVPR2025W/NTIRE/papers/Chen_NTIRE_2025_Challenge_on_Real-World_Face_Restoration_Methods_and_Results_CVPRW_2025_paper.pdf) | [arXiv](https://arxiv.org/abs/2504.14600)
 
 ## Citation
 

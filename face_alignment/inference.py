@@ -108,7 +108,7 @@ def inference_face(model, lq_path, pred_path, device, mode="test", crop_size=(11
     if mode == "val":
         points_csv = "face_alignment/val_face.csv"
     elif mode == "test":
-        points_csv = "face_alignment/test_face.csv"
+        points_csv = "face_alignment/test_2026_face.csv"
     df_proc = pd.read_csv(points_csv)
 
     refrence = get_reference_facial_points(default_square=crop_size[0] == crop_size[1])
@@ -203,6 +203,6 @@ if __name__ == '__main__':
     dict = inference(
         test_image_path=f'./NTIRE-FR/test',
         pred_image_path=f'/data/user/gj/DFOSD/test_ntire',
-        points_csv='face_alignment/test_face.csv'
+        points_csv='face_alignment/test_2026_face.csv'
     )
     filter_images_by_threshold("all", dict)
