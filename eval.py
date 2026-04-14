@@ -202,8 +202,8 @@ if __name__ == "__main__":
             'CelebA': 0.5,
             'LFW-Test': 0.6,
             'CelebChild-Test': 0.6,
-            'Wider-Test': 0.3,
-            'WebPhoto-Test': 0.3
+            'Wider-Test': 0.2,
+            'WebPhoto-Test': 0.25
         }
         
         dataset_counts = {
