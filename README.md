@@ -4,6 +4,7 @@
 [![arXiv](https://img.shields.io/badge/Report-arXiv-red?logo=arxiv&logoSvg)](https://arxiv.org/abs/2604.10532)
 [![page](https://img.shields.io/badge/Project-Page-blue?logo=github&logoSvg)](https://ntire-face.github.io/2026/)
 [![visitors](https://visitor-badge.laobi.icu/badge?page_id=jkwang28.NTIRE2026_RealWorld_Face_Restoration&right_color=violet)](https://github.com/jkwang28/NTIRE2026_RealWorld_Face_Restoration)
+[![certificate](https://img.shields.io/badge/🏅_Award-Certificate-gold)](https://www.cvlai.net/ntire/2026/NTIRE2026awards_certificates.pdf)
 [![GitHub Stars](https://img.shields.io/github/stars/jkwang28/NTIRE2026_RealWorld_Face_Restoration?style=social)](https://github.com/jkwang28/NTIRE2026_RealWorld_Face_Restoration)
 
 ## About the Challenge
